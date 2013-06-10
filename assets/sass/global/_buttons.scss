@@ -1,0 +1,56 @@
+// Default button styling
+a.btn, a.button, input#mktFrmSubmit, button, .btn, .button {
+	font: normal normal bold 13px/43px Arial, Helvetica, sans-serif;
+	cursor: auto;
+	display: inline-block;
+	height: 43px;
+	padding:0px 50px 0px 50px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100% !important;	
+	border: 1px solid black;
+	@include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 1px 0px);
+	@include text-shadow(rgba(255, 255, 255, 0.8) 0 1px 0);
+	@include border-radius(8px);
+}
+
+// Bringing some life to the buttons with color
+
+@mixin btn-color($color) {
+	background-color: $itr-#{$color};
+	color: $itr-#{$color}-accent;
+	border-color: $itr-#{$color}-accent;
+	&hover {
+		background-color: scale-lightness($itr-#{$color}, -5%);
+		cursor: pointer;
+	}
+}
+
+.btn-blue {
+	@include btn-color(blue);
+}
+
+.btn-orange {
+	@include btn-color(orange);
+}
+
+.btn-yellow {
+	@include btn-color(yellow);
+}
+
+.btn-green {
+	@include btn-color(green);
+}
+
+.btn-red {
+	@include btn-color(red);
+}
+
+.btn-purple {
+	@include btn-color(purple);
+}
+
+.btn-gray {
+	@include btn-color(gray);
+}
