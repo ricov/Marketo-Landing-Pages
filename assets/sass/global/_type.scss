@@ -1,5 +1,32 @@
+/* --- DEFAULT TEXT STYLES --- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
-	line-height: 44px;
+	font-size: 24px;
+	line-height: 32px;
+	color: $itr-gray-accent;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+b, big, i, small, tt, abbr, acronym, cite, code, dfn, em, strong, a, br, span, sub, sup, p, ul, li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 24px;
+	color: $itr-gray-accent;
+	text-align: left;
+}
+
+a {
+	text-decoration: underline;
+	font-weight: bold;
+	color: $itr-gray-accent;
+}
+
+p + p {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }

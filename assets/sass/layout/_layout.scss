@@ -1,0 +1,63 @@
+/* --- PAGE --- */
+
+html, body {
+	// make footer stick to bottom
+	height: 100%;
+}
+
+#outerWrapDiv, #innerWrapDiv {
+	// make footer stick to bottom
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -34px;
+}
+
+#innerWrapDiv {
+	margin-top: 0 !important;
+}
+
+#webHeaderDiv {
+	height: 75px;
+	background: url('http://pages.itriagehealth.com/rs/aetna3/images/ITR_BKG_Q2_13_Cloud_Header_BG.png') repeat-x;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#mktHeader, #mktContent {
+	// make content restricted to center of page
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+}
+
+#mktHeader {
+	margin-top: 20px;
+}
+
+/* --- FOOTER --- */
+
+#mktFooter {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+	background-color: $bdy-light-gray;
+	color: $itr-gray;
+	text-align: center;
+	#footerNav {
+		text-align: center;
+		display: inline-block;
+		a {
+			font-size: 12px;
+			line-height: 12px;
+			color: $itr-gray;
+			text-decoration: underline;
+			&:hover {
+				color: $itr-gray-accent;
+			}
+		}
+	}
+}

@@ -54,12 +54,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* --- DEFAULT TEXT STYLES --- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 44px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #58595b;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+b, big, i, small, tt, abbr, acronym, cite, code, dfn, em, strong, a, br, span, sub, sup, p, ul, li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 24px;
+  color: #58595b;
+  text-align: left;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #58595b;
+}
+
+p + p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* --- BUTTONS --- */
 .btn, .small, .big, button, input#mktFrmSubmit {
   vertical-align: middle;
   font: normal normal normal 13px/33px "Lato";
@@ -107,7 +135,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-blue {
+/* --- BUTTON COLOR OPTIONS --- */
+.btn.blue, .blue.small, .blue.big {
   background-color: #009cbb;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #11677f), color-stop(100%, #00b7db));
   background: -webkit-linear-gradient(bottom, #11677f, #00b7db);
@@ -116,14 +145,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #11677f, #00b7db);
   border-color: #0c4a5b;
 }
-.btn-blue:hover {
+.btn.blue:hover, .blue.small:hover, .blue.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #0b4656), color-stop(100%, #0094b2));
   background: -webkit-linear-gradient(bottom, #0b4656, #0094b2);
   background: -moz-linear-gradient(bottom, #0b4656, #0094b2);
   background: -o-linear-gradient(bottom, #0b4656, #0094b2);
   background: linear-gradient(bottom, #0b4656, #0094b2);
 }
-.btn-blue.inactive:hover {
+.btn.blue.inactive:hover, .blue.inactive.small:hover, .blue.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #11677f), color-stop(100%, #00b7db));
   background: -webkit-linear-gradient(bottom, #11677f, #00b7db);
   background: -moz-linear-gradient(bottom, #11677f, #00b7db);
@@ -132,7 +161,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-orange {
+.btn.orange, .orange.small, .orange.big {
   background-color: #f26724;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #973b1e), color-stop(100%, #f3763a));
   background: -webkit-linear-gradient(bottom, #973b1e, #f3763a);
@@ -141,14 +170,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #973b1e, #f3763a);
   border-color: #792f18;
 }
-.btn-orange:hover {
+.btn.orange:hover, .orange.small:hover, .orange.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #732d17), color-stop(100%, #f15e17));
   background: -webkit-linear-gradient(bottom, #732d17, #f15e17);
   background: -moz-linear-gradient(bottom, #732d17, #f15e17);
   background: -o-linear-gradient(bottom, #732d17, #f15e17);
   background: linear-gradient(bottom, #732d17, #f15e17);
 }
-.btn-orange.inactive:hover {
+.btn.orange.inactive:hover, .orange.inactive.small:hover, .orange.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #973b1e), color-stop(100%, #f3763a));
   background: -webkit-linear-gradient(bottom, #973b1e, #f3763a);
   background: -moz-linear-gradient(bottom, #973b1e, #f3763a);
@@ -157,7 +186,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-yellow {
+.btn.yellow, .yellow.small, .yellow.big {
   background-color: #fbbf13;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #9c7428), color-stop(100%, #fbc52b));
   background: -webkit-linear-gradient(bottom, #9c7428, #fbc52b);
@@ -166,14 +195,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #9c7428, #fbc52b);
   border-color: #805f21;
 }
-.btn-yellow:hover {
+.btn.yellow:hover, .yellow.small:hover, .yellow.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #7a5a1f), color-stop(100%, #fbbb06));
   background: -webkit-linear-gradient(bottom, #7a5a1f, #fbbb06);
   background: -moz-linear-gradient(bottom, #7a5a1f, #fbbb06);
   background: -o-linear-gradient(bottom, #7a5a1f, #fbbb06);
   background: linear-gradient(bottom, #7a5a1f, #fbbb06);
 }
-.btn-yellow.inactive:hover {
+.btn.yellow.inactive:hover, .yellow.inactive.small:hover, .yellow.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #9c7428), color-stop(100%, #fbc52b));
   background: -webkit-linear-gradient(bottom, #9c7428, #fbc52b);
   background: -moz-linear-gradient(bottom, #9c7428, #fbc52b);
@@ -182,7 +211,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-green {
+.btn.green, .green.small, .green.big {
   background-color: #a2c739;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #678433), color-stop(100%, #abcd4d));
   background: -webkit-linear-gradient(bottom, #678433, #abcd4d);
@@ -191,14 +220,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #678433, #abcd4d);
   border-color: #536a29;
 }
-.btn-green:hover {
+.btn.green:hover, .green.small:hover, .green.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #4f6527), color-stop(100%, #9abe36));
   background: -webkit-linear-gradient(bottom, #4f6527, #9abe36);
   background: -moz-linear-gradient(bottom, #4f6527, #9abe36);
   background: -o-linear-gradient(bottom, #4f6527, #9abe36);
   background: linear-gradient(bottom, #4f6527, #9abe36);
 }
-.btn-green.inactive:hover {
+.btn.green.inactive:hover, .green.inactive.small:hover, .green.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #678433), color-stop(100%, #abcd4d));
   background: -webkit-linear-gradient(bottom, #678433, #abcd4d);
   background: -moz-linear-gradient(bottom, #678433, #abcd4d);
@@ -207,7 +236,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-red {
+.btn.red, .red.small, .red.big {
   background-color: #b9252b;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #851f23), color-stop(100%, #d12a31));
   background: -webkit-linear-gradient(bottom, #851f23, #d12a31);
@@ -216,14 +245,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #851f23, #d12a31);
   border-color: #66181b;
 }
-.btn-red:hover {
+.btn.red:hover, .red.small:hover, .red.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #61171a), color-stop(100%, #b02329));
   background: -webkit-linear-gradient(bottom, #61171a, #b02329);
   background: -moz-linear-gradient(bottom, #61171a, #b02329);
   background: -o-linear-gradient(bottom, #61171a, #b02329);
   background: linear-gradient(bottom, #61171a, #b02329);
 }
-.btn-red.inactive:hover {
+.btn.red.inactive:hover, .red.inactive.small:hover, .red.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #851f23), color-stop(100%, #d12a31));
   background: -webkit-linear-gradient(bottom, #851f23, #d12a31);
   background: -moz-linear-gradient(bottom, #851f23, #d12a31);
@@ -232,7 +261,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-purple {
+.btn.purple, .purple.small, .purple.big {
   background-color: #833a8e;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #592b5e), color-stop(100%, #9743a4));
   background: -webkit-linear-gradient(bottom, #592b5e, #9743a4);
@@ -241,14 +270,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #592b5e, #9743a4);
   border-color: #3e1e42;
 }
-.btn-purple:hover {
+.btn.purple:hover, .purple.small:hover, .purple.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #3b1c3f), color-stop(100%, #7c3787));
   background: -webkit-linear-gradient(bottom, #3b1c3f, #7c3787);
   background: -moz-linear-gradient(bottom, #3b1c3f, #7c3787);
   background: -o-linear-gradient(bottom, #3b1c3f, #7c3787);
   background: linear-gradient(bottom, #3b1c3f, #7c3787);
 }
-.btn-purple.inactive:hover {
+.btn.purple.inactive:hover, .purple.inactive.small:hover, .purple.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #592b5e), color-stop(100%, #9743a4));
   background: -webkit-linear-gradient(bottom, #592b5e, #9743a4);
   background: -moz-linear-gradient(bottom, #592b5e, #9743a4);
@@ -257,7 +286,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   cursor: not-allowed;
 }
 
-.btn-gray {
+.btn.gray, .gray.small, .gray.big {
   background-color: #909195;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #68696c), color-stop(100%, #9b9ca0));
   background: -webkit-linear-gradient(bottom, #68696c, #9b9ca0);
@@ -266,18 +295,277 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: linear-gradient(bottom, #68696c, #9b9ca0);
   border-color: #58595b;
 }
-.btn-gray:hover {
+.btn.gray:hover, .gray.small:hover, .gray.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #545556), color-stop(100%, #898a8e));
   background: -webkit-linear-gradient(bottom, #545556, #898a8e);
   background: -moz-linear-gradient(bottom, #545556, #898a8e);
   background: -o-linear-gradient(bottom, #545556, #898a8e);
   background: linear-gradient(bottom, #545556, #898a8e);
 }
-.btn-gray.inactive:hover {
+.btn.gray.inactive:hover, .gray.inactive.small:hover, .gray.inactive.big:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #68696c), color-stop(100%, #9b9ca0));
   background: -webkit-linear-gradient(bottom, #68696c, #9b9ca0);
   background: -moz-linear-gradient(bottom, #68696c, #9b9ca0);
   background: -o-linear-gradient(bottom, #68696c, #9b9ca0);
   background: linear-gradient(bottom, #68696c, #9b9ca0);
   cursor: not-allowed;
+}
+
+/* --- PAGE --- */
+html, body {
+  height: 100%;
+}
+
+#outerWrapDiv, #innerWrapDiv {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -34px;
+}
+
+#innerWrapDiv {
+  margin-top: 0 !important;
+}
+
+#webHeaderDiv {
+  height: 75px;
+  background: url("http://pages.itriagehealth.com/rs/aetna3/images/ITR_BKG_Q2_13_Cloud_Header_BG.png") repeat-x;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#mktHeader, #mktContent {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+#mktHeader {
+  margin-top: 20px;
+}
+
+/* --- FOOTER --- */
+#mktFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #efefef;
+  color: #909195;
+  text-align: center;
+}
+#mktFooter #footerNav {
+  text-align: center;
+  display: inline-block;
+}
+#mktFooter #footerNav a {
+  font-size: 12px;
+  line-height: 12px;
+  color: #909195;
+  text-decoration: underline;
+}
+#mktFooter #footerNav a:hover {
+  color: #58595b;
+}
+
+/* --- SIMPLE MODAL STYLES --- */
+#simple-modal-overlay {
+  position: fixed;
+  display: block;
+  z-index: 99998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(white), to(#291a49));
+  background: -webkit-radial-gradient(circle, white, #291a49);
+  background: -moz-radial-gradient(circle, white, #291a49);
+  background: -ms-radial-gradient(circle, white, #291a49);
+}
+
+.simple-modal {
+  width: 600px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  position: fixed;
+  margin: 0;
+  color: #909195;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: #FFFFFF;
+  border: 1px solid #eaeefa;
+  border: 1px solid rgba(234, 238, 250, 0.6);
+  z-index: 99999;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: rgba(0, 0, 0, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.6);
+}
+
+.simple-modal .simple-modal-header {
+  padding: 5px 15px;
+  margin: 0;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #f8f8f8;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.simple-modal a.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 10px;
+  text-decoration: none;
+}
+
+.simple-modal a.close:hover {
+  color: #444;
+}
+
+.simple-modal .simple-modal-body {
+  padding: 15px;
+}
+
+.simple-modal .simple-modal-body div.contents {
+  overflow: hidden;
+}
+
+.simple-modal .simple-modal-body p img {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.simple-modal .simple-modal-footer {
+  display: block;
+  background-color: #F5F5F5;
+  padding: 14px 15px 15px;
+  border-top: 1px solid #eeeeee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px white;
+  -moz-box-shadow: inset 0 1px white;
+  box-shadow: inset 0 1px white;
+  zoom: 1;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.simple-modal .simple-modal-footer a.btn, .simple-modal .simple-modal-footer a.small, .simple-modal .simple-modal-footer a.big {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 33px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #909195;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #68696c), color-stop(100%, #9b9ca0));
+  background: -webkit-linear-gradient(bottom, #68696c, #9b9ca0);
+  background: -moz-linear-gradient(bottom, #68696c, #9b9ca0);
+  background: -o-linear-gradient(bottom, #68696c, #9b9ca0);
+  background: linear-gradient(bottom, #68696c, #9b9ca0);
+  border-color: #58595b;
+  border: 1px solid #58595b;
+  vertical-align: middle;
+}
+.simple-modal .simple-modal-footer a.btn:hover, .simple-modal .simple-modal-footer a.small:hover, .simple-modal .simple-modal-footer a.big:hover {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #545556), color-stop(100%, #898a8e));
+  background: -webkit-linear-gradient(bottom, #545556, #898a8e);
+  background: -moz-linear-gradient(bottom, #545556, #898a8e);
+  background: -o-linear-gradient(bottom, #545556, #898a8e);
+  background: linear-gradient(bottom, #545556, #898a8e);
+}
+.simple-modal .simple-modal-footer a.btn.inactive:hover, .simple-modal .simple-modal-footer a.inactive.small:hover, .simple-modal .simple-modal-footer a.inactive.big:hover {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #68696c), color-stop(100%, #9b9ca0));
+  background: -webkit-linear-gradient(bottom, #68696c, #9b9ca0);
+  background: -moz-linear-gradient(bottom, #68696c, #9b9ca0);
+  background: -o-linear-gradient(bottom, #68696c, #9b9ca0);
+  background: linear-gradient(bottom, #68696c, #9b9ca0);
+  cursor: not-allowed;
+}
+
+.simple-modal .simple-modal-footer a.btn.primary, .simple-modal .simple-modal-footer a.primary.small, .simple-modal .simple-modal-footer a.primary.big {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  margin-right: 15px;
+}
+
+.simple-modal .simple-modal-footer a.btn.primary:hover, .simple-modal .simple-modal-footer a.primary.small:hover, .simple-modal .simple-modal-footer a.primary.big:hover {
+  border-color: #58595b;
+  background-color: #58595b;
+}
+
+.simple-modal .simple-modal-footer a.btn.secondary, .simple-modal .simple-modal-footer a.secondary.small, .simple-modal .simple-modal-footer a.secondary.big {
+  padding: 5px 2px 6px;
+}
+
+.simple-modal .simple-modal-footer a.btn.secondary:hover, .simple-modal .simple-modal-footer a.secondary.small:hover, .simple-modal .simple-modal-footer a.secondary.big:hover {
+  color: #999;
+}
+
+/* Draggable style */
+.simple-modal.draggable .simple-modal-header:hover {
+  cursor: move;
+  background-color: #f8f8f8;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* Loading style */
+.simple-modal.loading .simple-modal-body {
+  min-height: 60px;
+  background: transparent url("http://pages.itriagehealth.com/rs/aetna3/images/loader.gif") no-repeat center center;
+}
+
+.simple-modal.loading .simple-modal-body div.contents {
+  display: none;
+}
+
+.simple-modal.loading .close, .simple-modal.loading .simple-modal-header, .simple-modal.loading .simple-modal-footer {
+  display: none;
+}
+
+/* Hide header */
+.simple-modal.hide-header .simple-modal-header {
+  display: none;
+}
+
+/* Hide header */
+.simple-modal.hide-footer .simple-modal-footer {
+  display: none;
 }

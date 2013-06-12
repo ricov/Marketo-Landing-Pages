@@ -1,3 +1,4 @@
+/* --- BUTTONS --- */
 // Default button styling
 .btn, button, input#mktFrmSubmit {
 	vertical-align: middle;
@@ -20,7 +21,6 @@
 }
 
 // Some button sizing options
-
 .small {
 	@extend .btn;
 	height: 20px;
@@ -40,8 +40,8 @@
 	opacity: 0.5;
 	cursor: not-allowed;
 }
-// Bringing some life to the buttons with color
 
+/* --- BUTTON COLOR OPTIONS --- */
 @mixin btn-color($color, $accent) {
 	background-color: $color;
 //	@include background(linear-gradient(bottom, scale-lightness($accent,10%), scale-lightness($color,10%)));
@@ -57,30 +57,30 @@
 	}
 }
 
-.btn-blue {
+.btn.blue {
 	@include btn-color($itr-blue, $itr-blue-accent);
 }
 
-.btn-orange {
+.btn.orange {
 	@include btn-color($itr-orange, $itr-orange-accent);
 }
 
-.btn-yellow {
+.btn.yellow {
 	@include btn-color($itr-yellow, $itr-yellow-accent);
 }
 
-.btn-green {
+.btn.green {
 	@include btn-color($itr-green, $itr-green-accent);
 }
 
-.btn-red {
+.btn.red {
 	@include btn-color($itr-red, $itr-red-accent);
 }
 
-.btn-purple {
+.btn.purple {
 	@include btn-color($itr-purple, $itr-purple-accent);
 }
 
-.btn-gray {
+.btn.gray {
 	@include btn-color($itr-gray, $itr-gray-accent);
 }
