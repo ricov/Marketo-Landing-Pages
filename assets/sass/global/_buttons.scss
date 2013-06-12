@@ -1,56 +1,86 @@
 // Default button styling
-a.btn, a.button, input#mktFrmSubmit, button, .btn, .button {
-	font: normal normal bold 13px/43px Arial, Helvetica, sans-serif;
-	cursor: auto;
+.btn, button, input#mktFrmSubmit {
+	vertical-align: middle;
+	font: normal normal normal 13px/33px "Lato";
 	display: inline-block;
-	height: 43px;
-	padding:0px 50px 0px 50px;
 	text-align: center;
+	height: 33px;
+	padding: 0 20px;
 	text-decoration: none;
-	text-transform: uppercase;
-	width: 100% !important;	
-	border: 1px solid black;
-	@include box-shadow(rgba(0, 0, 0, 0.2) 0px 1px 1px 0px);
-	@include text-shadow(rgba(255, 255, 255, 0.8) 0 1px 0);
-	@include border-radius(8px);
+	text-transform: capitalize;
+	color: #fff;
+	border: 1px solid #fff;
+	@include box-shadow(rgba(0,0,0,0.5) 1px 2px 4px);
+	@include border-radius(4px);
+	@include text-shadow(rgba(0,0,0,0.4) 0 1px 0);
+	&:hover, &:focus {
+		cursor: pointer;
+		@include transition(background-color 0.2s ease-in-out);
+	}
 }
 
+// Some button sizing options
+
+.small {
+	@extend .btn;
+	height: 20px;
+	font-size: 10px;
+	line-height: 20px;
+}
+
+.big {
+	@extend .btn;
+	height: 43px;
+	font-size: 18px;
+	line-height: 43px;
+	padding: 0 30px;
+}
+
+.inactive {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
 // Bringing some life to the buttons with color
 
-@mixin btn-color($color) {
-	background-color: $itr-#{$color};
-	color: $itr-#{$color}-accent;
-	border-color: $itr-#{$color}-accent;
-	&hover {
-		background-color: scale-lightness($itr-#{$color}, -5%);
-		cursor: pointer;
+@mixin btn-color($color, $accent) {
+	background-color: $color;
+//	@include background(linear-gradient(bottom, scale-lightness($accent,10%), scale-lightness($color,10%)));
+	@include background(linear-gradient(bottom, scale-lightness($accent,10%), scale-lightness($color,10%)));
+	border-color: $accent;
+	&:hover {
+		//background-color: scale-lightness($color, -20%);
+		@include background(linear-gradient(bottom, scale-lightness($accent, -5%), scale-lightness($color, -5%)));
+	}
+	&.inactive:hover {
+		@include background(linear-gradient(bottom, scale-lightness($accent,10%), scale-lightness($color,10%)));
+		cursor: not-allowed;
 	}
 }
 
 .btn-blue {
-	@include btn-color(blue);
+	@include btn-color($itr-blue, $itr-blue-accent);
 }
 
 .btn-orange {
-	@include btn-color(orange);
+	@include btn-color($itr-orange, $itr-orange-accent);
 }
 
 .btn-yellow {
-	@include btn-color(yellow);
+	@include btn-color($itr-yellow, $itr-yellow-accent);
 }
 
 .btn-green {
-	@include btn-color(green);
+	@include btn-color($itr-green, $itr-green-accent);
 }
 
 .btn-red {
-	@include btn-color(red);
+	@include btn-color($itr-red, $itr-red-accent);
 }
 
 .btn-purple {
-	@include btn-color(purple);
+	@include btn-color($itr-purple, $itr-purple-accent);
 }
 
 .btn-gray {
-	@include btn-color(gray);
+	@include btn-color($itr-gray, $itr-gray-accent);
 }
