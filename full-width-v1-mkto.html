@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ID=edge,chrome=1">
+
+	<!-- HTML 5 SHIM -->
+	<!--[if lt IE 9]>
+		<script src="dist/html5shiv.js"></script>
+	<![endif]-->
+	
+	<!-- MARKETO CSS - DO NOT EDIT -->
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/mktLPSupport.css" />
+	<style type="text/css">
+	#bodyId {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+	}
+	div#outerWrapDiv {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+	div#innerWrapDiv {
+		position: relative;
+		background: #ffffff;
+		padding: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 80px;
+		margin-bottom: 80px;
+		text-align: left;
+	}
+	</style>
+
+	<!-- SHARED LOCAL CSS - USE EMBEDDED CSS ON PRODUCTION -->
+	<style type="text/css">
 /* --- DEFAULT TEXT STYLES --- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -314,3 +353,81 @@ html, body {
 #mktFooter #footerNav a:hover {
   color: #58595b;
 }
+
+	</style>
+	    
+	<!-- jQuery and Plugins-->
+	<script language="Javascript" src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+	
+
+
+    <!-- MARKETO FORM VALIDATION JAVASCRIPT - DO NOT EDIT -->
+	<script type="text/javascript">
+		function fieldValidate(field) {
+		  /* call Mkto.setError(field, message) and return false to mark a field value invalid */
+		  /* return 'skip' to bypass the built-in validations */
+		  return true;
+		}
+		function getRequiredFieldMessage(domElement, label) {
+		  return "This field is required";
+		}
+		function getTelephoneInvalidMessage(domElement, label) {
+		  return "Please enter a valid telephone number";
+		}
+		function getEmailInvalidMessage(domElement, label) {
+		  return "Please enter a valid email address";
+		}
+	</script>
+
+	<!-- MARKETO FORM PREFILL JAVASCRIPT - DO NOT EDIT -->
+	<script>mktoPreFillFields = {};</script>
+
+	<!-- SYSTEM INCLUDES - DO NOT EDIT -->
+	<?php echo $mContext['headElements']; ?>
+</head>
+
+<body id="bodyId" class="mktEditable" align="center" <?php echo $mContext['bodyAttributes'] ?>>
+	<div id="outerWrapDiv">
+		<div id="mktHeader" class="mktEditable">
+			<a href="http://www.itriagehealth.com"><img src="http://pages.itriagehealth.com/rs/aetna3/images/logo.png" width="180" height="55" alt="iTriage, LLC" /></a>
+		</div>
+
+		<div id="webHeaderDiv">
+		<!-- NO CONTENT INSIDE THIS DIV THIS IS THE CLOUD HEADER DIV -->
+		</div>
+		
+		<div id="innerWrapDiv" class="mktEditable">
+			<?php echo $mContext['bodyElements']; ?>
+
+			<!-- MAIN CONTENT AREA INSERTED VIA MARKETO -->
+			<div id="mktContent" class="mktEditable">
+				
+			</div>
+		</div>
+		
+		<div id="mktFooter" class="mktEditable">
+			<nav id="footerNav">
+				<span><a href="https://www.itriagehealth.com/legal/privacy_policy">Privacy Policy</a></span>
+				<span>|</span>
+				<span><a href="mailto:info@itriagehealth.com">Contact Us</a></span>
+			</nav>
+		</div>
+	</div>
+<!-- MARKETO MUNCHKIN TRACKING SCRIPT -->
+<?php echo $mContext['endElements']; ?>
+
+<!-- GOOGLE ANALYTICS TRACKING SCRIPT -->
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7345705-6']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+</body>
